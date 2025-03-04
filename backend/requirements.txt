@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Cors
+APScheduler
+numpy
+pandas
+scikit-learn
+requests
+matplotlib
