@@ -1,0 +1,15 @@
+# Dependencias principales para el análisis de datos y machine learning
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.2.2
+
+# Dependencias para visualización
+matplotlib==3.7.1
+seaborn==0.12.2
+
+# Dependencias para datos financieros
+yfinance==0.2.18
+
+# Dependencias para hacer peticiones HTTP y manejo de variables de entorno
+requests==2.31.0
+python-dotenv==1.0.0

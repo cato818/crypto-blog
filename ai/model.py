@@ -1,25 +1,59 @@
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-import pandas as pd
 import numpy as np
-import joblib
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestRegressor
 
 class CryptoPricePredictor:
     def __init__(self):
-        self.model = RandomForestRegressor(n_estimators=100, random_state=42)
-
+        self.model = RandomForestRegressor(
+            n_estimators=100,
+            max_depth=10,
+            random_state=42
+        )
+        self.scaler = StandardScaler()
+        
+    def prepare_data(self, data):
+        """Prepara los datos normalizándolos"""
+        if 'price' not in data.columns:
+            raise ValueError("El DataFrame debe contener una columna 'price'")
+        
+        # Separar features y target
+        features = data.drop('price', axis=1)
+        target = data['price']
+        
+        # Normalizar features
+        scaled_features = self.scaler.fit_transform(features)
+        normalized_data = pd.DataFrame(
+            scaled_features,
+            columns=features.columns,
+            index=features.index
+        )
+        
+        return normalized_data, target
+        
     def train(self, data):
-        X = data.drop('price', axis=1)
-        y = data['price']
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        self.model.fit(X_train, y_train)
-        return self.model.score(X_test, y_test)
-
-    def predict(self, features):
-        return self.model.predict(np.array(features).reshape(1, -1))
-
-    def save_model(self, filename):
-        joblib.dump(self.model, filename)
-
-    def load_model(self, filename):
-        self.model = joblib.load(filename)
+        """Entrena el modelo con los datos proporcionados"""
+        X, y = self.prepare_data(data)
+        
+        # Entrenar modelo
+        self.model.fit(X, y)
+        
+        # Calcular métricas
+        predictions = self.model.predict(X)
+        feature_importance = self.model.feature_importances_
+        
+        return {
+            'test_score': self.model.score(X, y),
+            'feature_importance': feature_importance
+        }
+        
+    def predict(self, X):
+        """Realiza predicciones con el modelo entrenado"""
+        if not hasattr(self.model, 'feature_importances_'):
+            raise RuntimeError("El modelo debe ser entrenado antes de hacer predicciones")
+            
+        # Normalizar datos de entrada
+        X_scaled = self.scaler.transform(X)
+        
+        # Hacer predicción
+        return self.model.predict(X_scaled)

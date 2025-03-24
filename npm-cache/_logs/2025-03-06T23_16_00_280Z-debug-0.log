@@ -1,0 +1,38 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\crypto-blog\.npmrc
+5 silly config load:file:C:\Users\adrian\.npmrc
+6 silly config load:file:C:\Users\adrian\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\adrian\AppData\Local\npm-cache\_logs\2025-03-06T23_16_00_280Z-
+10 verbose logfile C:\Users\adrian\AppData\Local\npm-cache\_logs\2025-03-06T23_16_00_280Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2101084160 maxSize:525271040 maxEntrySize:262635520
+13 silly logfile done cleaning log files
+14 verbose stack JSONParseError: Unexpected end of JSON input while parsing empty string
+14 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-package-json-fast\lib\index.js:7:61
+14 verbose stack     at async #initTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:268:21)
+14 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:178:7)
+14 verbose stack     at async Promise.all (index 1)
+14 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+14 verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:150:5)
+14 verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:207:9)
+14 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:74:5)
+15 error code EJSONPARSE
+16 error path D:\crypto-blog/package.json
+17 error JSON.parse Unexpected end of JSON input while parsing empty string
+18 error JSON.parse Failed to parse JSON data.
+18 error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+19 silly unfinished npm timer reify 1741302962255
+20 silly unfinished npm timer reify:loadTrees 1741302962257
+21 silly unfinished npm timer idealTree:init 1741302962259
+22 verbose cwd D:\crypto-blog
+23 verbose os Windows_NT 10.0.22000
+24 verbose node v22.14.0
+25 verbose npm  v10.9.2
+26 verbose exit 1
+27 verbose code 1
+28 error A complete log of this run can be found in: C:\Users\adrian\AppData\Local\npm-cache\_logs\2025-03-06T23_16_00_280Z-debug-0.log

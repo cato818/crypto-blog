@@ -1,0 +1,22 @@
+'Log files:
+C:\Users\adrian\AppData\Local\npm-cache\_logs\2025-02-19T00_32_36_302Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: undefined@undefined
+Found: @mui/icons-material@undefined
+node_modules/@mui/icons-material
+  @mui/icons-material@"*" from the root project
+
+Could not resolve dependency:
+@mui/icons-material@"*" from the root project
+
+Conflicting peer dependency: @mui/material@6.4.5
+node_modules/@mui/material
+  peer @mui/material@"^6.4.5" from @mui/icons-material@6.4.5
+  node_modules/@mui/icons-material
+    @mui/icons-material@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

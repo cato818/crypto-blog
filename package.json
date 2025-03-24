@@ -1,0 +1,17 @@
+{
+  "name": "crypto-blog",
+  "version": "1.0.0",
+  "description": "A blog for cryptocurrency predictions and insights.",
+  "main": "index.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}

@@ -1,26 +1,28 @@
-# Frontend Documentation for Crypto Blog
+# Documentación del Frontend para Crypto Blog
 
-This directory contains the frontend files for the Crypto Blog project, which features a predictive AI for cryptocurrency prices.
+Este directorio contiene los archivos del frontend para el proyecto Crypto Blog, que presenta una IA predictiva para los precios de las criptomonedas.
 
-## Files Overview
+## Resumen de Archivos
 
-- **index.html**: The main HTML file that structures the blog layout, including sections for displaying cryptocurrency predictions and a subscription form.
+- **index.html**: El archivo HTML principal que estructura el diseño del blog, incluyendo secciones para mostrar predicciones de criptomonedas y un formulario de suscripción.
   
-- **styles.css**: Contains the CSS styles that define the appearance and layout of the blog, ensuring a responsive and user-friendly interface.
+- **styles.css**: Contiene los estilos CSS que definen la apariencia y el diseño del blog, asegurando una interfaz receptiva y fácil de usar.
   
-- **script.js**: JavaScript file that handles dynamic interactions on the frontend, including form validation and updating prediction charts based on user input and data fetched from the backend.
+- **script.js**: Archivo JavaScript que maneja las interacciones dinámicas en el frontend, incluyendo la validación de formularios y la actualización de gráficos de predicción basados en la entrada del usuario y los datos obtenidos del backend.
 
-## Setup Instructions
+## Instrucciones de Configuración
 
-1. Ensure you have a modern web browser to view the frontend.
-2. Open `index.html` in your browser to view the blog.
-3. Make sure the backend server is running to fetch data for predictions and handle user subscriptions.
+1. Asegúrate de tener un navegador web moderno para ver el frontend.
+2. Abre `index.html` en tu navegador para ver el blog.
+3. Asegúrate de que el servidor backend esté en funcionamiento para obtener datos de predicciones y manejar las suscripciones de usuarios.
 
-## Usage
+## Uso
 
-- Users can view cryptocurrency predictions and subscribe to updates through the provided form.
-- The blog will dynamically update with the latest predictions as data is fetched from the backend.
+- Los usuarios pueden ver predicciones de criptomonedas y suscribirse a actualizaciones a través del formulario proporcionado.
+- El blog se actualizará dinámicamente con las últimas predicciones a medida que se obtengan datos del backend.
 
-## Contributing
+## Contribuyendo
 
-Feel free to contribute to the frontend by improving styles, adding features, or fixing bugs. Ensure to test your changes in various browsers for compatibility.
+Siéntete libre de contribuir al frontend mejorando los estilos, agregando funciones o corrigiendo errores. Asegúrate de probar tus cambios en varios navegadores para garantizar la compatibilidad.
+
+Este archivo proporciona documentación para el frontend de tu proyecto. Asegúrate de que la información esté actualizada y sea precisa.
